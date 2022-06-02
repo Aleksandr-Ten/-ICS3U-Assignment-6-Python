@@ -2,7 +2,7 @@
 
 # Created by: Aleksandr Ten
 # Created on: May 2022
-# This program calculates the largest of 10 random numbers
+# This program calculates the surface area of cylinder
 
 import math
 
@@ -11,7 +11,7 @@ def calculate_area(radius, height):
     # calculate area
 
     # process
-    area = 2 * math.pi * radius * height + 2 * math.pi * radius ** 2
+    area = 2 * math.pi * radius * height + 2 * math.pi * radius**2
 
     # output
     return area
@@ -21,8 +21,8 @@ def main():
     # this function gets the user input
 
     # input
-    radius_string = input("Enter the side length of a square (cm) : ")
-    height_string = input("Enter the side length of a square (cm) : ")
+    radius_string = input("Enter the radius of a cylinder (cm): ")
+    height_string = input("Enter the height of a cylinder (cm): ")
 
     # call function
     try:
@@ -32,11 +32,10 @@ def main():
             if height > 0:
                 calculated_area = round(calculate_area(radius, height), 2)
                 print(
-                    "\nThe area of a square with a side length of {0} cm is {1} cm.".format(
+                    "\nThe area of a square with a side length of {0} cm is {1} cm².".format(
                         radius_string, calculated_area
                     )
                 )
-            
         else:
             print("\nNegative number entered, please try again.")
     except Exception:
